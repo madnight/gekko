@@ -419,6 +419,22 @@ config.mongodb = {
   }]
 }
 
+config.StochRSI_MACD = {
+  interval: 14,
+  short: 12,
+  long: 26,
+  signal: 9,
+  thresholds: {
+    low: 20,
+    high: 80,
+    down: -0.1,//-2,//-0.1,
+    up: 0.1,//1.5,//0.25,
+    // How many candle intervals should a trend persist
+    // before we consider it real?
+    persistence: 3
+  }
+};
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //                       CONFIGURING BACKTESTING
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
